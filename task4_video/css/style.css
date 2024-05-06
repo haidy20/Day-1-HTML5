@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90vw;
+    height: 70vh;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex; 
+    gap:20px;
+    align-items: center;
+    transition:ease-in-out 2s;
+    background-color: rgb(227, 171, 236);
+}
+.container:hover{
+    box-shadow: 0 0 10px 10px #e241a2;
+    border: 2px solid #001B79;
+
+}
+
+.mainwrapper {
+    border: 3px solid rgb(139, 107, 203);
+    height: 50vh;
+    width: 50vw;
+    border-radius: 10px;
+    overflow: auto;
+    column-count: 2;
+    column-rule: 3px solid #a02007;
+    padding: 20px; 
+    resize: both;
+    background: radial-gradient(circle, rgba(63,239,251,0) 0%, rgb(52, 136, 142) 100%); 
+}
+.mainwrapper mark{
+    background-color: red;
+}
+.side-section {
+    resize: both;
+    column-count: auto;
+    display: inline-block;
+   height: 50vh;
+   width: 50vw;
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    border-radius: 10px;
+    border: 3px solid blue;
+    background: rgb(126, 63, 251);
+    background: radial-gradient(circle, rgba(63,239,251,0) 0%, rgb(52, 136, 142) 100%); 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+.side-section img {
+    margin:10px; 
+    border: 1px solid #001B79;
+    box-shadow:10px 10px 3px 3px rgb(161, 30, 124) inset;
+    transition: ease-in-out 1.5s;
+    width: 100px; 
+    height: 100px; 
+
+}
+
+/* hovering and activing */
+.container:active{
+    box-shadow: 0 0 10px 10px #8cbe30;
+
+}
+.mainwrapper mark:hover{
+    background: rgb(226,22,22);
+    background: linear-gradient(90deg, rgba(226,22,22,1) 0%, rgba(208,255,0,1) 100%); 
+
+}
+.mainwrapper p:hover {
+    text-decoration: underline;
+}
+.container:hover{
+    transform: skewX(10deg);
+    border-color: #265073;
+}
+.container:active{
+    transform: scale(0.5);
+    border-color: #265073;
+}
+.side-section img:hover{
+    box-shadow: 0 0 9px 2px red;
+    transform: skewX(10deg);
+
+}
+.side-section img:active{
+    transform:scale(2);
+
+}
